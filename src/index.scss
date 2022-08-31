@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(236 241 246);
+  min-width: 360px;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+
+   .app {
+     width: 90%;
+     margin: 0 auto;
+       .app__filter {
+         width: 260px;
+         margin: 0 auto;
+         display: flex;
+         justify-content: center;
+         button {
+           width: 30px;
+           height: 30px;
+           border: 1px solid lightgray;
+           background-color: white;
+           &:hover {
+             cursor: pointer;
+           }
+         }
+         input {
+           width: 230px;
+           height: 30px;
+           outline: none;
+           border: 1px solid lightgray;
+           padding: 4px;
+           &:focus {
+             outline: 1px solid dodgerblue;
+           }
+         }
+       }
+       .app__content {
+         margin-top: 20px;
+         .app__list {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           .app__list__item {
+             position: relative;
+             width: 400px;
+             height: auto; //300px;
+             background-color: white;
+             margin: 16px 12px;
+             padding: 24px;
+             display: grid;
+             grid-template-rows: min-content auto min-content;//80px 160px 20px;
+             .app__list__item__title {
+               font-size: 28px;
+               color: dodgerblue;
+               overflow-x: hidden;
+               overflow-y: auto;
+               text-transform: capitalize;
+             }
+             .app__list__item__text {
+               //max-height: 80%;
+               font-size: 20px;
+               color: black;
+               overflow-x: hidden;
+               overflow-y: auto;
+             }
+             .app__list__item__author {
+               font-size: 14px;
+               color: darkgray;
+               margin-top: 12px;
+             }
+           }
+         }
+       }
+   }
+}
